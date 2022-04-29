@@ -29,8 +29,7 @@ public class EchoServer3 extends ECHOPROGServer{
     }
 
     public String login_1(String arg1, String arg2){
-        if(arg1.equals("Conor")){
-            //keep things simple
+        if(arg1.equals("Ben")){
             return "101: Login Successful";
         }
 
