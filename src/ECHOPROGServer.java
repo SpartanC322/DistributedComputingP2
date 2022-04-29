@@ -82,11 +82,11 @@ public abstract class ECHOPROGServer extends JRPCServer {
      * @param xout       Write the return parameter to this XDR stream.
      * @return           Returns true if the requested function can be served or false otherwise.
      */
-    public boolean DoCall(int proc, XDRStream xin, XDRStream xout) {
-        try {
+    public boolean DoCall(int proc, XDRStream xin, XDRStream xout){
+        try{
 
-            switch (proc) {
-                case login: {
+            switch (proc){
+                case login:{
                     login_1_argument arg = new login_1_argument();
                     arg.xdr_decode(xin);
                     String ret = login_1(arg.arg1, arg.arg2);
@@ -101,7 +101,7 @@ public abstract class ECHOPROGServer extends JRPCServer {
             return (proc==0)?true:false;
 
         }
-        catch (Exception e) {
+        catch (Exception e){
             return false;
         }
     }
